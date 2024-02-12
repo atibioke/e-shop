@@ -1,10 +1,9 @@
-**Welcome** to e-shop! This project is an ecommerce assessment application built using Next.js, Tailwind CSS, and various third-party libraries such as axios, @headlessui/react, and @heroicons/react.
+Welcome to e-shop! This project is an ecommerce assessment application built using Next.js, Tailwind CSS, and various third-party libraries such as axios, @headlessui/react, and @heroicons/react.
 
 **Project Structure.**
+├── components/ # Reusable React components
 
 ├── pages/ # Next.js pages
-
-├── components/ # Reusable React components
 
 ├── styles/ # Tailwind CSS styles
 
