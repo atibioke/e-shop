@@ -27,7 +27,6 @@ export default function Cart({open, setOpen}) {
     );
 
     setItemTotal(total);
-    setRender(!render);
   }, [cartItems]);
 
   return (
