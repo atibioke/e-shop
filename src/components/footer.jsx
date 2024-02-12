@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
               <div className="mb-10 w-full">
-                <Link href="/#" className="mb-6 inline-block max-w-[160px]">
+                <Link href="/" className="mb-6 inline-block max-w-[160px]">
                   <img
                     src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg"
                     alt="logo"
@@ -60,22 +60,22 @@ const Footer = () => {
             </div>
 
             <LinkGroup header="Resources">
-              <NavLink link="/#" label="SaaS Development" />
-              <NavLink link="/#" label="Our Products" />
-              <NavLink link="/#" label="User Flow" />
-              <NavLink link="/#" label="User Strategy" />
+              <NavLink link="/" label="SaaS Development" />
+              <NavLink link="/" label="Our Products" />
+              <NavLink link="/" label="User Flow" />
+              <NavLink link="/" label="User Strategy" />
             </LinkGroup>
             <LinkGroup header="Company">
-              <NavLink link="/#" label="About TailGrids" />
-              <NavLink link="/#" label="Contact & Support" />
-              <NavLink link="/#" label="Success History" />
-              <NavLink link="/#" label="Setting & Privacy" />
+              <NavLink link="/" label="About TailGrids" />
+              <NavLink link="/" label="Contact & Support" />
+              <NavLink link="/" label="Success History" />
+              <NavLink link="/" label="Setting & Privacy" />
             </LinkGroup>
             <LinkGroup header="Quick Links">
-              <NavLink link="/#" label="Premium Support" />
-              <NavLink link="/#" label="Our Services" />
-              <NavLink link="/#" label="Know Our Team" />
-              <NavLink link="/#" label="Download App" />
+              <NavLink link="/" label="Premium Support" />
+              <NavLink link="/" label="Our Services" />
+              <NavLink link="/" label="Know Our Team" />
+              <NavLink link="/" label="Download App" />
             </LinkGroup>
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
@@ -85,7 +85,7 @@ const Footer = () => {
                 </h4>
                 <div className="mb-6 flex items-center">
                   <Link
-                    href="javascript:void(0)"
+                    href="/"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="8"
@@ -96,7 +96,7 @@ const Footer = () => {
                     </svg>
                   </Link>
                   <Link
-                    href="javascript:void(0)"
+                    href="/"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="16"
@@ -107,7 +107,7 @@ const Footer = () => {
                     </svg>
                   </Link>
                   <Link
-                    href="javascript:void(0)"
+                    href="/"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="16"
@@ -118,7 +118,7 @@ const Footer = () => {
                     </svg>
                   </Link>
                   <Link
-                    href="javascript:void(0)"
+                    href="/"
                     className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="14"
