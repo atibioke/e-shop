@@ -94,7 +94,7 @@ const SingleProductPage = ({data}) => {
               <span className="font-bold text-gray-700 ">Quantity:</span>
               <div className="flex items-center mt-2">
                 <button
-                  className="w-6 h-6 rounded-full bg-red-500 flex justify-center items-center  mr-2 cursor-pointer"
+                  className="w-6 h-6 rounded-full bg-blue-500 text-white flex justify-center items-center  mr-2 cursor-pointer disabled:bg-gray-300 disabled:text-black"
                   onClick={handleMinus}
                   disabled={quantity === 1}>
                   -
@@ -103,7 +103,7 @@ const SingleProductPage = ({data}) => {
                 <p>{quantity}</p>
 
                 <button
-                  className="w-6 h-6 rounded-full bg-red-500 flex justify-center items-center  ml-2 cursor-pointer"
+                  className="w-6 h-6 rounded-full bg-blue-500 text-white flex justify-center items-center  ml-2 cursor-pointer disabled:bg-gray-300 disabled:text-black"
                   onClick={handlePlus}
                   disabled={currentProduct?.quantity === quantity}>
                   +
