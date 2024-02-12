@@ -35,7 +35,7 @@ const CreateProduct = () => {
         formData,
       );
       toast.success('Product added successfully');
-      console.log('Product added successfully:', response.data);
+
       // Clear form after successful submission
       setFormData({
         productName: '',
@@ -49,6 +49,7 @@ const CreateProduct = () => {
       });
     } catch (error) {
       console.error('Error adding product:', error);
+      toast.error(error.message);
     }
   };
   return (
@@ -160,6 +161,7 @@ const CreateProduct = () => {
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                 placeholder="https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg"
                 required
+                pattern="https?://.+"
               />
             </div>
 

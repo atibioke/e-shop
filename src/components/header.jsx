@@ -89,7 +89,7 @@ const Header = ({cartCount}) => {
                                   className="object-cover object-center"
                                 />
                               </div>
-                              <a
+                              <Link
                                 href={item.href}
                                 className="mt-6 block font-medium text-gray-900">
                                 <span
@@ -97,7 +97,7 @@ const Header = ({cartCount}) => {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </a>
+                              </Link>
                               <p aria-hidden="true" className="mt-1">
                                 Shop now
                               </p>
@@ -202,7 +202,7 @@ const Header = ({cartCount}) => {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Your Company</span>
+                  <span className="sr-only">eShop</span>
                   {/* <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -235,11 +235,11 @@ const Header = ({cartCount}) => {
                             as={Fragment}
                             enter="transition ease-out duration-200"
                             enterFrom="opacity-0"
-                            enterTo="opacity-100"
+                            enterTo="opacity-0"
                             leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100"
+                            leaveFrom="opacity-0"
                             leaveTo="opacity-0">
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
+                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500 opacity-0">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div
                                 className="absolute inset-0 top-1/2 bg-white shadow"
@@ -261,7 +261,7 @@ const Header = ({cartCount}) => {
                                               className="object-cover object-center"
                                             />
                                           </div>
-                                          <a
+                                          <Link
                                             href={item.href}
                                             className="mt-6 block font-medium text-gray-900">
                                             <span
@@ -269,7 +269,7 @@ const Header = ({cartCount}) => {
                                               aria-hidden="true"
                                             />
                                             {item.name}
-                                          </a>
+                                          </Link>
                                           <p
                                             aria-hidden="true"
                                             className="mt-1">
@@ -294,11 +294,11 @@ const Header = ({cartCount}) => {
                                               <li
                                                 key={item.name}
                                                 className="flex">
-                                                <a
-                                                  href={item.href}
+                                                <Link
+                                                  href="/"
                                                   className="hover:text-gray-800">
                                                   {item.name}
-                                                </a>
+                                                </Link>
                                               </li>
                                             ))}
                                           </ul>
@@ -316,12 +316,12 @@ const Header = ({cartCount}) => {
                   ))}
 
                   {navigation.pages.map(page => (
-                    <a
+                    <Link
                       key={page.name}
-                      href={page.href}
+                      href="/"
                       className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
                       {page.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Group>
@@ -357,13 +357,15 @@ const Header = ({cartCount}) => {
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <Link
+                    href="#"
+                    className="p-2 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon
                       className="h-6 w-6"
                       aria-hidden="true"
                     />
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Cart */}

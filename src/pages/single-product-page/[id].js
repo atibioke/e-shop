@@ -6,11 +6,13 @@ import {useParams} from 'next/navigation';
 import {CountContext} from '../_app';
 import {updateCart} from '@/components/helper';
 import {toast} from 'react-toastify';
+import Cart from '@/components/cart';
 
 const SingleProductPage = ({data}) => {
   const {id} = useParams();
   const [currentProduct, setCurrentProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
+  const [open, setOpen] = useState(false);
 
   const {setRender, render} = useContext(CountContext);
 
@@ -58,7 +60,9 @@ const SingleProductPage = ({data}) => {
                 </button>
               </div>
               <div className="w-1/2 px-2">
-                <button className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600">
+                <button
+                  onClick={() => setOpen(true)}
+                  className="w-full bg-gray-200  text-gray-800  py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600">
                   Buy Now
                 </button>
               </div>
@@ -139,6 +143,7 @@ const SingleProductPage = ({data}) => {
           </div>
         </div>
       </div>
+      <Cart open={open} setOpen={setOpen} />
     </div>
   );
 };

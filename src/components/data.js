@@ -6,7 +6,7 @@ export const navigation = {
       featured: [
         {
           name: 'New Arrivals',
-          href: '#',
+          href: '/',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
           imageAlt:
@@ -14,7 +14,7 @@ export const navigation = {
         },
         {
           name: 'Basic Tees',
-          href: '#',
+          href: '/',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
           imageAlt:
@@ -26,38 +26,38 @@ export const navigation = {
           id: 'clothing',
           name: 'Clothing',
           items: [
-            {name: 'Tops', href: '#'},
-            {name: 'Dresses', href: '#'},
-            {name: 'Pants', href: '#'},
-            {name: 'Denim', href: '#'},
-            {name: 'Sweaters', href: '#'},
-            {name: 'T-Shirts', href: '#'},
-            {name: 'Jackets', href: '#'},
-            {name: 'Activewear', href: '#'},
-            {name: 'Browse All', href: '#'},
+            {name: 'Tops', href: '/'},
+            {name: 'Dresses', href: '/'},
+            {name: 'Pants', href: '/'},
+            {name: 'Denim', href: '/'},
+            {name: 'Sweaters', href: '/'},
+            {name: 'T-Shirts', href: '/'},
+            {name: 'Jackets', href: '/'},
+            {name: 'Activewear', href: '/'},
+            {name: 'Browse All', href: '/'},
           ],
         },
         {
           id: 'accessories',
           name: 'Accessories',
           items: [
-            {name: 'Watches', href: '#'},
-            {name: 'Wallets', href: '#'},
-            {name: 'Bags', href: '#'},
-            {name: 'Sunglasses', href: '#'},
-            {name: 'Hats', href: '#'},
-            {name: 'Belts', href: '#'},
+            {name: 'Watches', href: '/'},
+            {name: 'Wallets', href: '/'},
+            {name: 'Bags', href: '/'},
+            {name: 'Sunglasses', href: '/'},
+            {name: 'Hats', href: '/'},
+            {name: 'Belts', href: '/'},
           ],
         },
         {
           id: 'brands',
           name: 'Brands',
           items: [
-            {name: 'Full Nelson', href: '#'},
-            {name: 'My Way', href: '#'},
-            {name: 'Re-Arranged', href: '#'},
-            {name: 'Counterfeit', href: '#'},
-            {name: 'Significant Other', href: '#'},
+            {name: 'Full Nelson', href: '/'},
+            {name: 'My Way', href: '/'},
+            {name: 'Re-Arranged', href: '/'},
+            {name: 'Counterfeit', href: '/'},
+            {name: 'Significant Other', href: '/'},
           ],
         },
       ],
@@ -68,7 +68,7 @@ export const navigation = {
       featured: [
         {
           name: 'New Arrivals',
-          href: '#',
+          href: '/',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
           imageAlt:
@@ -76,7 +76,7 @@ export const navigation = {
         },
         {
           name: 'Artwork Tees',
-          href: '#',
+          href: '/',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
           imageAlt:
@@ -88,42 +88,42 @@ export const navigation = {
           id: 'clothing',
           name: 'Clothing',
           items: [
-            {name: 'Tops', href: '#'},
-            {name: 'Pants', href: '#'},
-            {name: 'Sweaters', href: '#'},
-            {name: 'T-Shirts', href: '#'},
-            {name: 'Jackets', href: '#'},
-            {name: 'Activewear', href: '#'},
-            {name: 'Browse All', href: '#'},
+            {name: 'Tops', href: '/'},
+            {name: 'Pants', href: '/'},
+            {name: 'Sweaters', href: '/'},
+            {name: 'T-Shirts', href: '/'},
+            {name: 'Jackets', href: '/'},
+            {name: 'Activewear', href: '/'},
+            {name: 'Browse All', href: '/'},
           ],
         },
         {
           id: 'accessories',
           name: 'Accessories',
           items: [
-            {name: 'Watches', href: '#'},
-            {name: 'Wallets', href: '#'},
-            {name: 'Bags', href: '#'},
-            {name: 'Sunglasses', href: '#'},
-            {name: 'Hats', href: '#'},
-            {name: 'Belts', href: '#'},
+            {name: 'Watches', href: '/'},
+            {name: 'Wallets', href: '/'},
+            {name: 'Bags', href: '/'},
+            {name: 'Sunglasses', href: '/'},
+            {name: 'Hats', href: '/'},
+            {name: 'Belts', href: '/'},
           ],
         },
         {
           id: 'brands',
           name: 'Brands',
           items: [
-            {name: 'Re-Arranged', href: '#'},
-            {name: 'Counterfeit', href: '#'},
-            {name: 'Full Nelson', href: '#'},
-            {name: 'My Way', href: '#'},
+            {name: 'Re-Arranged', href: '/'},
+            {name: 'Counterfeit', href: '/'},
+            {name: 'Full Nelson', href: '/'},
+            {name: 'My Way', href: '/'},
           ],
         },
       ],
     },
   ],
   pages: [
-    {name: 'Company', href: '#'},
-    {name: 'Stores', href: '#'},
+    {name: 'Company', href: '/'},
+    {name: 'Stores', href: '/'},
   ],
 };
