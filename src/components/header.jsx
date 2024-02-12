@@ -117,11 +117,11 @@ const Header = ({cartCount}) => {
                               className="mt-6 flex flex-col space-y-6">
                               {section.items.map(item => (
                                 <li key={item.name} className="flow-root">
-                                  <a
+                                  <Link
                                     href={item.href}
                                     className="-m-2 block p-2 text-gray-500">
                                     {item.name}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -135,29 +135,29 @@ const Header = ({cartCount}) => {
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   {navigation.pages.map(page => (
                     <div key={page.name} className="flow-root">
-                      <a
+                      <Link
                         href={page.href}
                         className="-m-2 block p-2 font-medium text-gray-900">
                         {page.name}
-                      </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <a
+                    <Link
                       href="#"
                       className="-m-2 block p-2 font-medium text-gray-900">
                       Sign in
-                    </a>
+                    </Link>
                   </div>
                   <div className="flow-root">
-                    <a
+                    <Link
                       href="#"
                       className="-m-2 block p-2 font-medium text-gray-900">
                       Create Product
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -201,15 +201,15 @@ const Header = ({cartCount}) => {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
-                  <span className="sr-only">eShop</span>
-                  {/* <img
+                <Link href="/">
+                  {/* <span className="sr-only">eShop</span> */}
+                  <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  /> */}
-                  <h3>eShop</h3>
-                </a>
+                    src="https://cdn.gencraft.com/prod/user/71f8728a-2818-4f51-8efc-fbb73edaa5e2/a6ddf8cb-80fb-4b50-943e-6dd7d5444aaf/image/image0_0.jpg?Expires=1707829883&Signature=h6EPmdlETs-eT1SF5fs-9TqI7G2LsH1C2Gh03ehvnrB2ppX9J8IjRbGav835YxW5x3W4HOnYHKydTpk4tEyQmsTJrWbKrgbR3KyCsqZlxQSkMORIMjsimo5X~LCqYqWuFjGUjZzvWMs41fWY0WoSjWM0YhfB-LDEMqhrxQvYhLKMZvsmJQ~nIbiduEvvR3OJhIjj66hFwBzhKfZWJKn3-6iCOXWcOjMlzx9QpZab7TROBIDlhVCUcCHK-SqqSrgbtZ92GNPqYydvvbaQ~2UmWKFkklMhb~a~RYn2QXoMiTikRaJaSl9ihI7NbxGGftK7Pmhso1mkDYoIRu1r3oDy8g__&Key-Pair-Id=K3RDDB1TZ8BHT8"
+                    alt="logo"
+                  />
+                  {/* <h3>eShop</h3> */}
+                </Link>
               </div>
 
               {/* Flyout menus */}

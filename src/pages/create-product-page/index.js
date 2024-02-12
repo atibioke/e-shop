@@ -31,7 +31,7 @@ const CreateProduct = () => {
 
     try {
       const response = await axios.post(
-        'https://my-json-server.typicode.com/carry1stdeveloper/mock-product-api/productBundles',
+        process.env.NEXT_PUBLIC_API_URL,
         formData,
       );
       toast.success('Product added successfully');

@@ -4,28 +4,23 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <footer className="relative z-10 bg-white pb-10 pt-20  lg:pb-10 lg:pt-[100px] mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
               <div className="mb-10 w-full">
                 <Link href="/" className="mb-6 inline-block max-w-[160px]">
                   <img
-                    src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg"
+                    src="https://cdn.gencraft.com/prod/user/71f8728a-2818-4f51-8efc-fbb73edaa5e2/a6ddf8cb-80fb-4b50-943e-6dd7d5444aaf/image/image0_0.jpg?Expires=1707829883&Signature=h6EPmdlETs-eT1SF5fs-9TqI7G2LsH1C2Gh03ehvnrB2ppX9J8IjRbGav835YxW5x3W4HOnYHKydTpk4tEyQmsTJrWbKrgbR3KyCsqZlxQSkMORIMjsimo5X~LCqYqWuFjGUjZzvWMs41fWY0WoSjWM0YhfB-LDEMqhrxQvYhLKMZvsmJQ~nIbiduEvvR3OJhIjj66hFwBzhKfZWJKn3-6iCOXWcOjMlzx9QpZab7TROBIDlhVCUcCHK-SqqSrgbtZ92GNPqYydvvbaQ~2UmWKFkklMhb~a~RYn2QXoMiTikRaJaSl9ihI7NbxGGftK7Pmhso1mkDYoIRu1r3oDy8g__&Key-Pair-Id=K3RDDB1TZ8BHT8"
                     alt="logo"
-                    className="max-w-full dark:hidden"
-                  />
-                  <img
-                    src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
-                    alt="logo"
-                    className="max-w-full hidden dark:block"
+                    className="max-w-full"
                   />
                 </Link>
-                <p className="mb-7 text-base text-body-color dark:text-dark-6">
+                <p className="mb-7 text-base text-body-color ">
                   Sed ut perspiciatis undmnis is iste natus error sit amet
                   voluptatem totam rem aperiam.
                 </p>
-                <p className="flex items-center text-sm font-medium text-dark dark:text-white">
+                <p className="flex items-center text-sm font-medium text-dark ">
                   <span className="mr-3 text-primary">
                     <svg
                       width="20"
@@ -54,39 +49,38 @@ const Footer = () => {
                       </defs>
                     </svg>
                   </span>
-                  <span>+012 (345) 678 99</span>
+                  <span>+234-8146-81-9263</span>
                 </p>
               </div>
             </div>
 
-            <LinkGroup header="Resources">
-              <NavLink link="/" label="SaaS Development" />
-              <NavLink link="/" label="Our Products" />
-              <NavLink link="/" label="User Flow" />
-              <NavLink link="/" label="User Strategy" />
+            <LinkGroup header="Solutions">
+              <NavLink link="/" label="Marketing" />
+              <NavLink link="/" label="Analytics" />
+              <NavLink link="/" label="Commerce" />
+              <NavLink link="/" label="Insights" />
             </LinkGroup>
-            <LinkGroup header="Company">
-              <NavLink link="/" label="About TailGrids" />
-              <NavLink link="/" label="Contact & Support" />
-              <NavLink link="/" label="Success History" />
-              <NavLink link="/" label="Setting & Privacy" />
+            <LinkGroup header="Support">
+              <NavLink link="/" label="Pricing" />
+              <NavLink link="/" label="Documentation" />
+              <NavLink link="/" label="Guides" />
+              <NavLink link="/" label="API Status" />
             </LinkGroup>
-            <LinkGroup header="Quick Links">
-              <NavLink link="/" label="Premium Support" />
-              <NavLink link="/" label="Our Services" />
-              <NavLink link="/" label="Know Our Team" />
-              <NavLink link="/" label="Download App" />
+            <LinkGroup header="Legal">
+              <NavLink link="/" label="Claim" />
+              <NavLink link="/" label="Privacy" />
+              <NavLink link="/" label="Terms" />
             </LinkGroup>
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
               <div className="mb-10 w-full">
-                <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
+                <h4 className="mb-9 text-lg font-semibold text-dark">
                   Follow Us On
                 </h4>
                 <div className="mb-6 flex items-center">
                   <Link
                     href="/"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
+                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3  sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="8"
                       height="16"
@@ -97,7 +91,7 @@ const Footer = () => {
                   </Link>
                   <Link
                     href="/"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
+                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3  sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="16"
                       height="12"
@@ -108,7 +102,7 @@ const Footer = () => {
                   </Link>
                   <Link
                     href="/"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
+                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3  sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="16"
                       height="12"
@@ -119,7 +113,7 @@ const Footer = () => {
                   </Link>
                   <Link
                     href="/"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4">
+                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3  sm:mr-4 lg:mr-3 xl:mr-4">
                     <svg
                       width="14"
                       height="14"
@@ -130,7 +124,7 @@ const Footer = () => {
                   </Link>
                 </div>
                 <p className="text-base text-body-color dark:text-dark-6">
-                  &copy; 2025 TailGrids
+                  &copy; 2024 eShop
                 </p>
               </div>
             </div>
