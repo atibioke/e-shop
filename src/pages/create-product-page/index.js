@@ -1,8 +1,11 @@
 import {useState} from 'react';
 import axios from 'axios';
 import {toast} from 'react-toastify';
+import {Loader} from '@/components/assets/icons';
 
 const CreateProduct = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     productName: '',
     price: '',
@@ -21,11 +24,12 @@ const CreateProduct = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-
+    setIsLoading(true);
     // Validate for empty inputs
     const emptyInputs = Object.values(formData).filter(value => value === '');
     if (emptyInputs.length > 0) {
       toast.error('Please fill in all fields');
+      setIsLoading(false);
       return;
     }
 
@@ -34,6 +38,7 @@ const CreateProduct = () => {
         process.env.NEXT_PUBLIC_API_URL,
         formData,
       );
+      setIsLoading(false);
       toast.success('Product added successfully');
 
       // Clear form after successful submission
@@ -187,10 +192,16 @@ const CreateProduct = () => {
 
       <div className="p-6 border-t border-gray-200 rounded-b flex justify-end">
         <button
-          className="text-white w-[300px]  bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer "
+          className="text-white w-[300px] h-11  bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center cursor-pointer "
           type="submit"
           onClick={handleSubmit}>
-          Add
+          {isLoading ? (
+            <div className="flex justify-center items-center">
+              <Loader />
+            </div>
+          ) : (
+            'Add'
+          )}
         </button>
       </div>
     </div>
