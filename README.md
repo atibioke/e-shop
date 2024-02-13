@@ -69,7 +69,9 @@ This project utilizes a .env file to store API endpoints. Ensure that you provid
 To set up testing for this project, you can use the following packages:
 npm install --save-dev @testing-library/react @testing-library/jest-dom jest and running npm install jest-environment-jsdom
 Additionally, create a jest.config.js file and a .babelrc file in the root folder as parts of the configurations.
-Test can be run using: You have to rename .babelrcc back to .babelrc then npm test --verbose
+Test can be run using: Create .babelrc then put {
+"presets": ["@babel/preset-env", "@babel/preset-react"]
+} then npm test --verbose
 
 **Feedback and Contributions**
 
