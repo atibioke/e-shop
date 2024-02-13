@@ -1,25 +1,14 @@
-import React, {useEffect, useState, useContext} from 'react';
-import Footer from '@/components/footer';
-import Header from '@/components/header';
+import React, {useState, useContext} from 'react';
 import axios from 'axios';
-import {useParams} from 'next/navigation';
 import {CountContext} from '../_app';
 import {updateCart} from '@/components/helper';
 import {toast} from 'react-toastify';
 import Cart from '@/components/cart';
 
 const SingleProductPage = ({data}) => {
-  const {id} = useParams();
-  const [currentProduct, setCurrentProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [open, setOpen] = useState(false);
-
   const {setRender, render} = useContext(CountContext);
-
-  useEffect(() => {
-    const foundItem = data.find(each => each.id == id);
-    setCurrentProduct(foundItem);
-  }, [data, id]);
 
   const handlePlus = () => {
     setQuantity(prev => prev + 1);
@@ -30,7 +19,7 @@ const SingleProductPage = ({data}) => {
   };
 
   const addToCart = () => {
-    const updateCartCheck = updateCart(currentProduct, quantity);
+    const updateCartCheck = updateCart(data, quantity);
     if (updateCartCheck) {
       setRender(!render);
       toast.success('Item Added Successfully');
@@ -47,7 +36,7 @@ const SingleProductPage = ({data}) => {
             <div className="h-[460px] rounded-lg bg-gray-300  mb-4">
               <img
                 className="w-full h-full object-contain"
-                src={currentProduct?.imageLocation}
+                src={data?.imageLocation}
                 alt="Product Image"
               />
             </div>
@@ -70,28 +59,30 @@ const SingleProductPage = ({data}) => {
           </div>
           <div className="md:flex-1 px-4">
             <h2 className="text-2xl font-bold text-gray-800  mb-2">
-              {currentProduct?.name}
+              {data?.name}
             </h2>
 
             <div className="flex mb-4">
               <div className="mr-4">
-                <span className="font-bold text-gray-700 ">Price:</span>
+                <span className="font-bold text-gray-700 ">Price: </span>
                 <span className="text-gray-600 ">
-                  {currentProduct?.currencySymbol}
-                  {currentProduct?.price}
+                  {data?.currencySymbol}
+                  {data?.price}
                 </span>
               </div>
               <div>
-                <span className="font-bold text-gray-700 ">Availability:</span>
+                <span className="font-bold text-gray-700 ">Availability: </span>
                 <span className="text-gray-600 ">
-                  {currentProduct?.status === 'ACTIVE'
-                    ? 'In Stock'
-                    : 'Not In Stock'}
+                  {data?.status === 'ACTIVE' ? (
+                    <span className="text-green-500">In Stock</span>
+                  ) : (
+                    <span>Not In Stock</span>
+                  )}
                 </span>
               </div>
             </div>
             <div className="mb-4">
-              <span className="font-bold text-gray-700 ">Quantity:</span>
+              <span className="font-bold text-gray-700 ">Quantity: </span>
               <div className="flex items-center mt-2">
                 <button
                   className="w-6 h-6 rounded-full bg-blue-500 text-white flex justify-center items-center  mr-2 cursor-pointer disabled:bg-gray-300 disabled:text-black"
@@ -105,7 +96,7 @@ const SingleProductPage = ({data}) => {
                 <button
                   className="w-6 h-6 rounded-full bg-blue-500 text-white flex justify-center items-center  ml-2 cursor-pointer disabled:bg-gray-300 disabled:text-black"
                   onClick={handlePlus}
-                  disabled={currentProduct?.quantity === quantity}>
+                  disabled={data?.quantity === quantity}>
                   +
                 </button>
               </div>
@@ -115,9 +106,7 @@ const SingleProductPage = ({data}) => {
               <span className="font-bold text-gray-700 ">
                 Product Description:
               </span>
-              <p className="text-gray-600  text-sm mt-2">
-                {currentProduct?.description}
-              </p>
+              <p className="text-gray-600  text-sm mt-2">{data?.description}</p>
             </div>
           </div>
         </div>
@@ -127,9 +116,12 @@ const SingleProductPage = ({data}) => {
   );
 };
 
-export async function getServerSideProps({}) {
+export async function getServerSideProps({params}) {
+  const {id} = params;
   try {
-    const response = await axios.get(process.env.NEXT_PUBLIC_API_URL);
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/${id}`,
+    );
 
     return {
       props: {
