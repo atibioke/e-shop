@@ -156,7 +156,7 @@ const Header = ({cartCount}) => {
                   <div className="flow-root">
                     <Link
                       onClick={() => setOpen(false)}
-                      href="/create-product-page"
+                      href="/create-product"
                       className="-m-2 block p-2 font-medium text-gray-900">
                       Create Product
                     </Link>
@@ -337,7 +337,7 @@ const Header = ({cartCount}) => {
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <Link
-                    href="/create-product-page"
+                    href="/create-product"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800">
                     Create Product
                   </Link>

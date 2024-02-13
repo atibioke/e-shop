@@ -2,6 +2,7 @@ import {useState} from 'react';
 import axios from 'axios';
 import {toast} from 'react-toastify';
 import {Loader} from '@/components/assets/icons';
+import {currencyJson} from '@/components/currencyJson';
 
 const CreateProduct = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,11 +20,32 @@ const CreateProduct = () => {
 
   const handleChange = e => {
     const {name, value} = e.target;
-    setFormData({...formData, [name]: value});
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  //FUNCTION TO SET CURRENCY SYMBOL.
+  const handleSelect = event => {
+    const selectedCurrencyCode = event.target.value;
+    const selectedCurrency = currencyJson.find(
+      currency => currency.code === selectedCurrencyCode,
+    );
+    if (selectedCurrency) {
+      setFormData({
+        ...formData,
+
+        currencySymbol: selectedCurrency.symbol,
+        currencyCode: selectedCurrency.code,
+      });
+    }
   };
 
   const handleSubmit = async e => {
     e.preventDefault();
+
     setIsLoading(true);
     // Validate for empty inputs
     const emptyInputs = Object.values(formData).filter(value => value === '');
@@ -50,13 +72,13 @@ const CreateProduct = () => {
         quantity: '',
         imageURL: '',
         productDetails: '',
-        status: '',
       });
     } catch (error) {
       console.error('Error adding product:', error);
       toast.error(error.message);
     }
   };
+
   return (
     <div className="bg-white relative m-10">
       <div className="flex items-start justify-between p-5 border-b rounded-t">
@@ -68,9 +90,9 @@ const CreateProduct = () => {
           <div className="grid grid-cols-6 gap-6">
             <div className="col-span-6 sm:col-span-3">
               <label
-                for="productName"
+                htmlFor="productName"
                 className="text-sm font-medium text-gray-900 block mb-2">
-                Product Name
+                Product name
               </label>
               <input
                 type="text"
@@ -85,7 +107,7 @@ const CreateProduct = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label
-                for="price"
+                htmlFor="price"
                 className="text-sm font-medium text-gray-900 block mb-2">
                 Price
               </label>
@@ -102,24 +124,26 @@ const CreateProduct = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label
-                for="currencyCode"
+                htmlFor="countries"
                 className="text-sm font-medium text-gray-900 block mb-2">
-                Currency code
+                Select currency code
               </label>
-              <input
-                type="text"
-                name="currencyCode"
-                value={formData.currencyCode}
-                onChange={handleChange}
-                id="currencyCode"
+              <select
+                id="countries"
                 className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
-                placeholder="USD"
-                required
-              />
+                value={formData.currencyCode}
+                onChange={handleSelect}>
+                <option defaultValue="">Choose currency code.</option>
+                {currencyJson.map(each => (
+                  <option value={each.code} key={each.code}>
+                    {each.code}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label
-                for="currencySymbol"
+                htmlFor="currencySymbol"
                 className="text-sm font-medium text-gray-900 block mb-2">
                 Currency symbol
               </label>
@@ -127,16 +151,16 @@ const CreateProduct = () => {
                 type="text"
                 name="currencySymbol"
                 value={formData.currencySymbol}
-                onChange={handleChange}
+                disabled
                 id="currencySymbol"
-                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5 cursor-not-allowed"
                 placeholder="$"
                 required
               />
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label
-                for="quantity"
+                htmlFor="quantity"
                 className="text-sm font-medium text-gray-900 block mb-2">
                 Quantity
               </label>
@@ -153,7 +177,7 @@ const CreateProduct = () => {
             </div>
             <div className="col-span-6 sm:col-span-3">
               <label
-                for="imageURL"
+                htmlFor="imageURL"
                 className="text-sm font-medium text-gray-900 block mb-2">
                 Image URL
               </label>
@@ -172,9 +196,9 @@ const CreateProduct = () => {
 
             <div className="col-span-full">
               <label
-                for="productDetails"
+                htmlFor="productDetails"
                 className="text-sm font-medium text-gray-900 block mb-2">
-                Product Details
+                Product details
               </label>
               <textarea
                 id="productDetails"
