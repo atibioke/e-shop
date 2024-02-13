@@ -24,7 +24,7 @@ const ProductList = () => {
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.length > 0 ? (
             products?.map(product => (
-              <Link key={product.id} href={`single-product/${product.id}`}>
+              <Link key={product.id} href={`product/${product.id}`}>
                 <div
                   key={product.id}
                   className="group relative cursor-pointer shadow-md p-4 rounded-sm">
