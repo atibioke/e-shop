@@ -1,5 +1,3 @@
-import Footer from '@/components/footer';
-import Header from '@/components/header';
 import ProductList from '@/components/productList';
 import {Inter} from 'next/font/google';
 

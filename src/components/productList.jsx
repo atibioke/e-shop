@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {fetchProduct} from '@/services';
 import Link from 'next/link';
-import {Loader} from './assets/icons';
+import {Loader} from '../../public/assets/icons';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);

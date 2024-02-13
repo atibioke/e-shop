@@ -59,6 +59,7 @@ _axios_: Used for making HTTP requests to fetch data from external APIs or the b
 _@headlessui/react and @heroicons/react_: These libraries provide accessible and customizable UI components and icons, enhancing the user experience.
 
 _React Testing Library_:Encourages writing tests from the perspective of the user, it provides a simple and intuitive API that makes writing tests easy.
+_React Toastify_: For a quick and descriptive alert
 
 **Environmental Variables**
 
@@ -68,7 +69,7 @@ This project utilizes a .env file to store API endpoints. Ensure that you provid
 To set up testing for this project, you can use the following packages:
 npm install --save-dev @testing-library/react @testing-library/jest-dom jest and running npm install jest-environment-jsdom
 Additionally, create a jest.config.js file and a .babelrc file in the root folder as parts of the configurations.
-Test can be run using: npm test --verbose
+Test can be run using: You have to rename .babelrcc back to .babelrc then npm test --verbose
 
 **Feedback and Contributions**
 

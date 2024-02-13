@@ -1,4 +1,4 @@
-import {Fragment, useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import {Dialog, Popover, Tab, Transition} from '@headlessui/react';
 import {
   Bars3Icon,
@@ -183,7 +183,7 @@ const Header = ({cartCount}) => {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <p className="flex h-10 items-center justify-center bg-[#7a82ba] px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
 
@@ -204,13 +204,11 @@ const Header = ({cartCount}) => {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
-                  {/* <span className="sr-only">eShop</span> */}
                   <img
                     className="h-8 w-auto"
-                    src="https://cdn.gencraft.com/prod/user/71f8728a-2818-4f51-8efc-fbb73edaa5e2/a6ddf8cb-80fb-4b50-943e-6dd7d5444aaf/image/image0_0.jpg?Expires=1707829883&Signature=h6EPmdlETs-eT1SF5fs-9TqI7G2LsH1C2Gh03ehvnrB2ppX9J8IjRbGav835YxW5x3W4HOnYHKydTpk4tEyQmsTJrWbKrgbR3KyCsqZlxQSkMORIMjsimo5X~LCqYqWuFjGUjZzvWMs41fWY0WoSjWM0YhfB-LDEMqhrxQvYhLKMZvsmJQ~nIbiduEvvR3OJhIjj66hFwBzhKfZWJKn3-6iCOXWcOjMlzx9QpZab7TROBIDlhVCUcCHK-SqqSrgbtZ92GNPqYydvvbaQ~2UmWKFkklMhb~a~RYn2QXoMiTikRaJaSl9ihI7NbxGGftK7Pmhso1mkDYoIRu1r3oDy8g__&Key-Pair-Id=K3RDDB1TZ8BHT8"
+                    src="/assets/images/logo.png"
                     alt="logo"
                   />
-                  {/* <h3>eShop</h3> */}
                 </Link>
               </div>
 

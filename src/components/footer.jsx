@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="mb-10 w-full">
                 <Link href="/" className="mb-6 inline-block max-w-[160px]">
                   <img
-                    src="https://cdn.gencraft.com/prod/user/71f8728a-2818-4f51-8efc-fbb73edaa5e2/a6ddf8cb-80fb-4b50-943e-6dd7d5444aaf/image/image0_0.jpg?Expires=1707829883&Signature=h6EPmdlETs-eT1SF5fs-9TqI7G2LsH1C2Gh03ehvnrB2ppX9J8IjRbGav835YxW5x3W4HOnYHKydTpk4tEyQmsTJrWbKrgbR3KyCsqZlxQSkMORIMjsimo5X~LCqYqWuFjGUjZzvWMs41fWY0WoSjWM0YhfB-LDEMqhrxQvYhLKMZvsmJQ~nIbiduEvvR3OJhIjj66hFwBzhKfZWJKn3-6iCOXWcOjMlzx9QpZab7TROBIDlhVCUcCHK-SqqSrgbtZ92GNPqYydvvbaQ~2UmWKFkklMhb~a~RYn2QXoMiTikRaJaSl9ihI7NbxGGftK7Pmhso1mkDYoIRu1r3oDy8g__&Key-Pair-Id=K3RDDB1TZ8BHT8"
+                    src="/assets/images/logo.png"
                     alt="logo"
                     className="max-w-full"
                   />

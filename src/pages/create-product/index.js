@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import axios from 'axios';
 import {toast} from 'react-toastify';
-import {Loader} from '@/components/assets/icons';
+import {Loader} from '../../../public/assets/icons';
 import {currencyJson} from '@/components/currencyJson';
 import Form from '@/components/form';
 

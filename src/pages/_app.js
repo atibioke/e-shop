@@ -1,6 +1,6 @@
 import Layout from '@/components/layout';
 import '@/styles/globals.css';
-import {useEffect, useState, createContext} from 'react';
+import React, {useEffect, useState, createContext} from 'react';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
